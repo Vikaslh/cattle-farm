@@ -32,23 +32,15 @@ function App() {
   const animals = [
     {
       type: "Sheep",
-      image: "https://images.pexels.com/photos/1722655/pexels-photo-1722655.jpeg",
+      image: "https://images.pexels.com/photos/2219840/pexels-photo-2219840.jpeg",
       description: "Premium quality sheep with excellent breeding lines",
       available: 15,
       price: "₹8,000 - ₹15,000",
       care: "₹2,000/month"
     },
     {
-      type: "Cows",
-      image: "https://images.pexels.com/photos/139399/pexels-photo-139399.jpeg",
-      description: "Healthy dairy cows and breeding bulls",
-      available: 8,
-      price: "₹25,000 - ₹60,000",
-      care: "₹4,500/month"
-    },
-    {
       type: "Goats",
-      image: "https://images.pexels.com/photos/1656515/pexels-photo-1656515.jpeg",
+      image: "https://images.pexels.com/photos/422218/pexels-photo-422218.jpeg",
       description: "Hardy goats perfect for milk production and breeding",
       available: 22,
       price: "₹5,000 - ₹12,000",
@@ -56,7 +48,7 @@ function App() {
     },
     {
       type: "Chickens",
-      image: "https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg",
+      image: "https://images.pexels.com/photos/1300355/pexels-photo-1300355.jpeg",
       description: "Free-range chickens and premium egg layers",
       available: 50,
       price: "₹300 - ₹800",
