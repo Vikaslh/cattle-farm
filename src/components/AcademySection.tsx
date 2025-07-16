@@ -1,8 +1,11 @@
-import React from 'react';
-import ClassScheduleCard from './ClassScheduleCard';
-import BookingForm from './BookingForm';
-import HorseGallery from './HorseGallery';
-import { Award, Shield, Heart } from 'lucide-react';
+'use client'
+
+import React from 'react'
+import ClassScheduleCard from './ClassScheduleCard'
+import BookingForm from './BookingForm'
+import HorseGallery from './HorseGallery'
+import { Award, Shield, Heart } from 'lucide-react'
+import Image from 'next/image'
 
 const AcademySection: React.FC = () => (
   <section id="academy" className="py-20 bg-cream-50">
@@ -14,10 +17,12 @@ const AcademySection: React.FC = () => (
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <img
+        <div className="relative">
+          <Image
             src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg"
             alt="Horse riding lesson"
+            width={600}
+            height={400}
             className="rounded-lg shadow-xl w-full h-96 object-cover"
           />
         </div>
@@ -86,6 +91,6 @@ const AcademySection: React.FC = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default AcademySection; 
+export default AcademySection

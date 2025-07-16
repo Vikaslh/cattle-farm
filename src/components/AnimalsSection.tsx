@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import AnimalCard, { Animal } from './AnimalCard';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+'use client'
+
+import React, { useState } from 'react'
+import AnimalCard, { Animal } from './AnimalCard'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const animals: Animal[] = [
   {
@@ -35,13 +37,13 @@ const animals: Animal[] = [
     price: '₹60/litre',
     care: 'N/A',
   },
-];
+]
 
 const AnimalsSection: React.FC = () => {
-  const [currentAnimal, setCurrentAnimal] = useState(0);
+  const [currentAnimal, setCurrentAnimal] = useState(0)
 
-  const nextAnimal = () => setCurrentAnimal((prev) => (prev + 1) % animals.length);
-  const prevAnimal = () => setCurrentAnimal((prev) => (prev - 1 + animals.length) % animals.length);
+  const nextAnimal = () => setCurrentAnimal((prev) => (prev + 1) % animals.length)
+  const prevAnimal = () => setCurrentAnimal((prev) => (prev - 1 + animals.length) % animals.length)
 
   return (
     <section id="animals" className="py-20 bg-white">
@@ -78,7 +80,7 @@ const AnimalsSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AnimalsSection; 
+export default AnimalsSection

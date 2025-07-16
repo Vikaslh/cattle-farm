@@ -1,16 +1,18 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
 
 export interface ClassSchedule {
-  day: string;
-  time: string;
+  day: string
+  time: string
 }
 
 interface ClassScheduleCardProps {
-  title: string;
-  schedule: ClassSchedule[];
-  duration: string;
-  price: string;
-  extra?: string;
+  title: string
+  schedule: ClassSchedule[]
+  duration: string
+  price: string
+  extra?: string
 }
 
 const ClassScheduleCard: React.FC<ClassScheduleCardProps> = ({ title, schedule, duration, price, extra }) => (
@@ -31,6 +33,6 @@ const ClassScheduleCard: React.FC<ClassScheduleCardProps> = ({ title, schedule, 
       <div className="text-forest-800 font-bold text-lg mt-4">{price}</div>
     </div>
   </div>
-);
+)
 
-export default ClassScheduleCard; 
+export default ClassScheduleCard

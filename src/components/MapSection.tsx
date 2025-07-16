@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
 
 const MapSection: React.FC = () => (
   <div className="bg-white/10 rounded-lg p-6">
@@ -26,6 +28,6 @@ const MapSection: React.FC = () => (
       </a>
     </div>
   </div>
-);
+)
 
-export default MapSection; 
+export default MapSection

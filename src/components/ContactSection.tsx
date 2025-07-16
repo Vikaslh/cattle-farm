@@ -1,7 +1,9 @@
-import React from 'react';
-import ContactForm from './ContactForm';
-import ContactInfo from './ContactInfo';
-import MapSection from './MapSection';
+'use client'
+
+import React from 'react'
+import ContactForm from './ContactForm'
+import ContactInfo from './ContactInfo'
+import MapSection from './MapSection'
 
 const ContactSection: React.FC = () => (
   <section id="contact" className="py-20 bg-forest-800 text-white">
@@ -9,7 +11,7 @@ const ContactSection: React.FC = () => (
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
         <p className="text-lg text-cream-200 max-w-2xl mx-auto">
-          Have questions or ready to start your journey with us? We'd love to hear from you.
+          Have questions or ready to start your journey with us? We&apos;d love to hear from you.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -26,6 +28,6 @@ const ContactSection: React.FC = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default ContactSection; 
+export default ContactSection

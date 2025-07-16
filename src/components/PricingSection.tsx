@@ -1,5 +1,7 @@
-import React from 'react';
-import PricingCard, { PricingPlan } from './PricingCard';
+'use client'
+
+import React from 'react'
+import PricingCard, { PricingPlan } from './PricingCard'
 
 const pricingPlans: PricingPlan[] = [
   {
@@ -35,7 +37,7 @@ const pricingPlans: PricingPlan[] = [
       '24/7 farm access',
     ],
   },
-];
+]
 
 const PricingSection: React.FC = () => (
   <section id="pricing" className="py-20 bg-cream-50">
@@ -53,6 +55,6 @@ const PricingSection: React.FC = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default PricingSection; 
+export default PricingSection

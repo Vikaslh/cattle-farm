@@ -1,5 +1,6 @@
-import React from 'react';
-import farmVideo from '../assets/images/WhatsApp Video 2025-07-13 at 22.33.44.mp4';
+'use client'
+
+import React from 'react'
 
 const AboutSection: React.FC = () => (
   <section id="about" className="py-20 bg-cream-50">
@@ -25,16 +26,13 @@ const AboutSection: React.FC = () => (
           </div>
         </div>
         <div className="relative">
-          <video
-            src={farmVideo}
-            controls
-            className="rounded-lg shadow-xl w-full h-96 object-contain bg-black"
-            style={{ maxHeight: '400px' }}
-          />
+          <div className="bg-black rounded-lg shadow-xl w-full h-96 flex items-center justify-center">
+            <p className="text-white text-center">Farm Video<br />Coming Soon</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-);
+)
 
-export default AboutSection; 
+export default AboutSection

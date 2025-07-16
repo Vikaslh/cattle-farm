@@ -1,5 +1,7 @@
-import React from 'react';
-import { MessageCircle, Phone } from 'lucide-react';
+'use client'
+
+import React from 'react'
+import { MessageCircle, Phone } from 'lucide-react'
 
 const Footer: React.FC = () => (
   <footer className="bg-forest-900 text-cream-200 py-12">
@@ -43,6 +45,6 @@ const Footer: React.FC = () => (
       </div>
     </div>
   </footer>
-);
+)
 
-export default Footer; 
+export default Footer

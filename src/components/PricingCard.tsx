@@ -1,15 +1,17 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
 
 export interface PricingPlan {
-  title: string;
-  price: string;
-  features: string[];
-  popular?: boolean;
+  title: string
+  price: string
+  features: string[]
+  popular?: boolean
 }
 
 interface PricingCardProps {
-  plan: PricingPlan;
-  isPopular?: boolean;
+  plan: PricingPlan
+  isPopular?: boolean
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({ plan, isPopular }) => (
@@ -30,6 +32,6 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, isPopular }) => (
       {plan.title === 'Barn Rental' ? 'Inquire Now' : 'Choose Plan'}
     </button>
   </div>
-);
+)
 
-export default PricingCard; 
+export default PricingCard

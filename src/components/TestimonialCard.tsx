@@ -1,14 +1,16 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
 
 export interface Testimonial {
-  name: string;
-  rating: number;
-  text: string;
+  name: string
+  rating: number
+  text: string
 }
 
 interface TestimonialCardProps {
-  testimonial: Testimonial;
-  renderStars: (rating: number) => React.ReactNode;
+  testimonial: Testimonial
+  renderStars: (rating: number) => React.ReactNode
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, renderStars }) => (
@@ -17,12 +19,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, renderSt
       {renderStars(testimonial.rating)}
     </div>
     <p className="text-lg text-forest-700 mb-6 italic leading-relaxed">
-      "{testimonial.text}"
+      &quot;{testimonial.text}&quot;
     </p>
     <p className="text-forest-800 font-semibold">
       {testimonial.name}
     </p>
   </div>
-);
+)
 
-export default TestimonialCard; 
+export default TestimonialCard

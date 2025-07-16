@@ -1,5 +1,7 @@
-import React from 'react';
-import { Phone, MessageCircle, Mail, MapPin, Clock } from 'lucide-react';
+'use client'
+
+import React from 'react'
+import { Phone, MessageCircle, Mail, MapPin, Clock } from 'lucide-react'
 
 const ContactInfo: React.FC = () => (
   <div className="space-y-8">
@@ -44,6 +46,6 @@ const ContactInfo: React.FC = () => (
       </div>
     </div>
   </div>
-);
+)
 
-export default ContactInfo; 
+export default ContactInfo

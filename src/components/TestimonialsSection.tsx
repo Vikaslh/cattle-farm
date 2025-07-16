@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import TestimonialCard, { Testimonial } from './TestimonialCard';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+'use client'
+
+import React, { useState } from 'react'
+import TestimonialCard, { Testimonial } from './TestimonialCard'
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const testimonials: Testimonial[] = [
   {
@@ -23,7 +25,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     text: 'The barn rental service is fantastic. Our cattle are in safe hands and the monthly care is worth every rupee.'
   }
-];
+]
 
 const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, i) => (
@@ -31,14 +33,14 @@ const renderStars = (rating: number) => {
       key={i}
       className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
     />
-  ));
-};
+  ))
+}
 
 const TestimonialsSection: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
-  const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+  const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
 
   return (
     <section className="py-20 bg-white">
@@ -69,7 +71,7 @@ const TestimonialsSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default TestimonialsSection; 
+export default TestimonialsSection

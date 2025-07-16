@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+'use client'
+
+import React, { useState } from 'react'
 
 interface ContactFormFields {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
+  name: string
+  email: string
+  phone: string
+  message: string
 }
 
 const ContactForm: React.FC = () => {
@@ -13,36 +15,36 @@ const ContactForm: React.FC = () => {
     email: '',
     phone: '',
     message: '',
-  });
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState('');
+  })
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFields({ ...fields, [e.target.name]: e.target.value });
-  };
+    setFields({ ...fields, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
+    e.preventDefault()
+    setLoading(true)
+    setError('')
     try {
-      await new Promise(res => setTimeout(res, 1200));
-      setSuccess(true);
-      setFields({ name: '', email: '', phone: '', message: '' });
+      await new Promise(res => setTimeout(res, 1200))
+      setSuccess(true)
+      setFields({ name: '', email: '', phone: '', message: '' })
     } catch {
-      setError('Something went wrong. Please try again.');
+      setError('Something went wrong. Please try again.')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   if (success) {
     return (
       <div className="bg-green-100 text-green-800 p-4 rounded mb-4 text-center font-semibold">
         Thank you for reaching out! We have received your message and will get back to you soon.
       </div>
-    );
+    )
   }
 
   return (
@@ -105,7 +107,7 @@ const ContactForm: React.FC = () => {
         {loading ? 'Sending...' : 'Send Message'}
       </button>
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm; 
+export default ContactForm

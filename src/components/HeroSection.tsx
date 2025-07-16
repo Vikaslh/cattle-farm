@@ -1,16 +1,21 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
+import Image from 'next/image'
 
 interface HeroSectionProps {
-  scrollToSection: (sectionId: string) => void;
+  scrollToSection: (sectionId: string) => void
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => (
   <section id="home" className="relative h-screen flex items-center justify-center">
     <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30">
-      <img
+      <Image
         src="https://thumbs.dreamstime.com/b/spring-lambs-baby-sheep-field-young-green-farm-70100459.jpg"
         alt="Countryside farm view"
-        className="w-full h-full object-cover"
+        fill
+        className="object-cover"
+        priority
       />
     </div>
     <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
@@ -36,6 +41,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => (
       </div>
     </div>
   </section>
-);
+)
 
-export default HeroSection; 
+export default HeroSection

@@ -1,8 +1,10 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  question: string
+  answer: string
 }
 
 const faqs: FAQItem[] = [
@@ -26,7 +28,7 @@ const faqs: FAQItem[] = [
     question: "Do you provide transportation for purchased animals?",
     answer: "Yes, we offer safe transportation services for purchased livestock within a 100km radius. Additional charges apply based on distance and number of animals."
   },
-];
+]
 
 const FAQSection: React.FC = () => (
   <section className="py-20 bg-white">
@@ -47,6 +49,6 @@ const FAQSection: React.FC = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default FAQSection; 
+export default FAQSection

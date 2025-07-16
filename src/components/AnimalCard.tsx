@@ -1,26 +1,32 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
+import Image from 'next/image'
 
 export interface Animal {
-  type: string;
-  image: string;
-  description: string;
-  available: number;
-  price: string;
-  care: string;
+  type: string
+  image: string
+  description: string
+  available: number
+  price: string
+  care: string
 }
 
 interface AnimalCardProps {
-  animal: Animal;
-  onQuickInquiry?: () => void;
+  animal: Animal
+  onQuickInquiry?: () => void
 }
 
 const AnimalCard: React.FC<AnimalCardProps> = ({ animal, onQuickInquiry }) => (
   <div className="bg-cream-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-    <img
-      src={animal.image}
-      alt={animal.type}
-      className="w-full h-48 object-cover rounded-lg mb-4"
-    />
+    <div className="relative w-full h-48 mb-4">
+      <Image
+        src={animal.image}
+        alt={animal.type}
+        fill
+        className="object-cover rounded-lg"
+      />
+    </div>
     <h3 className="text-xl font-bold text-forest-800 mb-2">{animal.type}</h3>
     <p className="text-forest-600 text-sm mb-4">{animal.description}</p>
     <div className="space-y-2 mb-6">
@@ -44,6 +50,6 @@ const AnimalCard: React.FC<AnimalCardProps> = ({ animal, onQuickInquiry }) => (
       Quick Inquiry
     </button>
   </div>
-);
+)
 
-export default AnimalCard; 
+export default AnimalCard
